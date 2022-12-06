@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/campPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:password="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/txtContraOlvidada"
+        app:layout_constraintStart_toStartOf="@+id/campUser"
+        app:layout_constraintTop_toBottomOf="@+id/campUser" />
+
+    <TextView
+        android:id="@+id/txtContraOlvidada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="67dp"
+        android:elevation="10dp"
+        android:onClick="contrasenaOlvidada"
+        android:text="¿ has olvidado tu contraseña ?"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@+id/campPassword"
+        app:layout_constraintTop_toBottomOf="@+id/campPassword" />
+
+    <EditText
+        android:id="@+id/campUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="15dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="User"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/campPassword"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/BtnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#26412865"
+        android:elevation="20dp"
+        android:onClick="accederRegistro"
+        android:radius="50dp"
+        android:shadowRadius="50"
+        android:text="Register"
+        app:cornerRadius="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#26412865"
+        android:elevation="20dp"
+        android:onClick="comprobarUsuario"
+        android:radius="50dp"
+        android:shadowRadius="50"
+        android:text="Login"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnRegister"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContraOlvidada" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/campUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuarioicon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

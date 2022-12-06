@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_registro"
+    tools:context=".RegisterActivity">
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="#26412865"
+        android:elevation="20dp"
+        android:onClick="salir"
+        android:radius="50dp"
+        android:shadowRadius="50"
+        android:text="return"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/campRegisterPassRe" />
+
+    <EditText
+        android:id="@+id/campEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/email"
+
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/campUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/campLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/name"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/campRegisterPass"
+        app:layout_constraintStart_toStartOf="@+id/campFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/campFirstName" />
+
+    <EditText
+        android:id="@+id/campRegisterPassRe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/re_lock"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:password="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/btnExit"
+        app:layout_constraintStart_toStartOf="@+id/campRegisterPass"
+        app:layout_constraintTop_toBottomOf="@+id/campRegisterPass" />
+
+    <EditText
+        android:id="@+id/campUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="User Name"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/campFirstName"
+        app:layout_constraintStart_toStartOf="@+id/campEmail"
+        app:layout_constraintTop_toBottomOf="@+id/campEmail" />
+
+    <EditText
+        android:id="@+id/campFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/name"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/campLastName"
+        app:layout_constraintStart_toStartOf="@+id/campUserName"
+        app:layout_constraintTop_toBottomOf="@+id/campUserName" />
+
+    <EditText
+        android:id="@+id/campRegisterPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/input_custom"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:password="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/campRegisterPassRe"
+        app:layout_constraintStart_toStartOf="@+id/campLastName"
+        app:layout_constraintTop_toBottomOf="@+id/campLastName" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="#26412865"
+        android:elevation="20dp"
+        android:onClick="registrar"
+        android:radius="50dp"
+        android:shadowRadius="50"
+        android:text="Register"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnExit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/campEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/registro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
